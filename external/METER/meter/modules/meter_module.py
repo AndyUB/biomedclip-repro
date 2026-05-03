@@ -306,8 +306,11 @@ class METERTransformerSS(pl.LightningModule):
         ret = dict()
 
         if self.hparams.config["loss_names"]["vqa"] > 0:
-            if "vqa_rad" in self.hparams.config.get("datasets", []):
+            ds = self.hparams.config.get("datasets", [])
+            if "vqa_rad" in ds:
                 ret.update(objectives.vqa_rad_test_step(self, batch, output))
+            elif "slake" in ds:
+                ret.update(objectives.slake_test_step(self, batch, output))
             else:
                 ret.update(objectives.vqa_test_step(self, batch, output))
 
@@ -319,8 +322,11 @@ class METERTransformerSS(pl.LightningModule):
         model_name = self.hparams.config["load_path"].split("/")[-1][:-5]
 
         if self.hparams.config["loss_names"]["vqa"] > 0:
-            if "vqa_rad" in self.hparams.config.get("datasets", []):
+            ds = self.hparams.config.get("datasets", [])
+            if "vqa_rad" in ds:
                 objectives.vqa_rad_test_wrapup(outs, model_name)
+            elif "slake" in ds:
+                objectives.slake_test_wrapup(outs, model_name)
             else:
                 objectives.vqa_test_wrapup(outs, model_name)
         meter_utils.epoch_wrapup(self)

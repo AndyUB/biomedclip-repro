@@ -254,6 +254,34 @@ def task_finetune_vqa_rad_biomedclip():
     num_gpus = 1
 
 
+@ex.named_config
+def task_finetune_slake_biomedclip():
+    exp_name = "finetune_slake"
+    datasets = ["slake"]
+    loss_names = _loss_names({"vqa": 1})
+    vqav2_label_size = 221  # unique answers in SLAKE English training set
+    batch_size = 32
+    max_epoch = 20
+    max_steps = None
+    warmup_steps = 0.1
+    draw_false_image = 0
+    learning_rate = 5e-6
+    val_check_interval = 1.0
+    lr_mult_head = 50
+    lr_mult_cross_modal = 5
+    tokenizer = "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract"
+    vocab_size = 30522
+    max_text_len = 50
+    input_text_embed_size = 768
+    vit = "biomedclip"
+    train_transform_keys = ["clip"]
+    val_transform_keys = ["clip"]
+    input_image_embed_size = 768
+    image_size = 224
+    patch_size = 16
+    num_gpus = 1
+
+
 # Named configs for "etc" which are orthogonal to "env" and "task", need to be added at the end
 
 # vision encoder

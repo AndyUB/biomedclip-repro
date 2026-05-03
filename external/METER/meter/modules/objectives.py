@@ -517,6 +517,74 @@ def vqa_rad_test_wrapup(outs, model_name, results_dir="result"):
     return result
 
 
+def slake_test_step(pl_module, batch, output):
+    """Test step for SLAKE: returns predictions + ground truth for metric computation."""
+    id2answer = pl_module.trainer.datamodule.dm_dicts["slake"].id2answer
+    vqa_logits = output["vqa_logits"]
+    vqa_preds = vqa_logits.argmax(dim=-1)
+    pred_strs = [id2answer[pred.item()] for pred in vqa_preds]
+    gold_strs = [a[0] if a else "" for a in batch["vqa_answer"]]
+    return {
+        "preds": pred_strs,
+        "golds": gold_strs,
+        "answer_types": batch["answer_type"],
+    }
+
+
+def slake_test_wrapup(outs, model_name, results_dir="result"):
+    """Compute SLAKE overall / closed / open accuracy and token-F1."""
+    preds, golds, types = [], [], []
+    for out in outs:
+        preds += out["preds"]
+        golds += out["golds"]
+        types += out["answer_types"]
+
+    correct_all, correct_closed, correct_open = 0, 0, 0
+    f1_all = 0.0
+    n_closed, n_open = 0, 0
+
+    for pred, gold, atype in zip(preds, golds, types):
+        exact = int(pred.strip() == gold.strip())
+        f1 = _token_f1(pred, gold)
+        correct_all += exact
+        f1_all += f1
+        if atype == "CLOSED":
+            correct_closed += exact
+            n_closed += 1
+        else:
+            correct_open += exact
+            n_open += 1
+
+    n_total = len(preds)
+    acc_all = correct_all / n_total if n_total else 0.0
+    acc_closed = correct_closed / n_closed if n_closed else 0.0
+    acc_open = correct_open / n_open if n_open else 0.0
+    avg_f1 = f1_all / n_total if n_total else 0.0
+
+    print(f"\n=== SLAKE Test Results ({model_name}) ===")
+    print(f"  Overall accuracy : {acc_all*100:.2f}% ({correct_all}/{n_total})")
+    print(f"  Closed accuracy  : {acc_closed*100:.2f}% ({correct_closed}/{n_closed})")
+    print(f"  Open accuracy    : {acc_open*100:.2f}% ({correct_open}/{n_open})")
+    print(f"  Token F1         : {avg_f1*100:.2f}%")
+
+    os.makedirs(results_dir, exist_ok=True)
+    result = {
+        "model": model_name,
+        "overall_acc": acc_all,
+        "closed_acc": acc_closed,
+        "open_acc": acc_open,
+        "token_f1": avg_f1,
+        "n_total": n_total,
+        "n_closed": n_closed,
+        "n_open": n_open,
+    }
+    out_path = f"{results_dir}/slake_{model_name}.json"
+    with open(out_path, "w") as fp:
+        json.dump(result, fp, indent=2)
+    print(f"  Saved to {out_path}")
+    return result
+
+
 def arc_test_step(pl_module, batch, output):
     return output
 
