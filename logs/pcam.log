@@ -1,0 +1,28 @@
+(biomedclip) ➜  src python eval_pcam.py --data_dir ../data/pcam
+
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+PCam test set: 32768 images
+
+=== pcam ===
+Accuracy: 0.7267 (72.67%)
+                       precision    recall  f1-score   support
+
+    normal lymph node       0.80      0.61      0.69     16391
+lymph node metastasis       0.68      0.85      0.76     16377
+
+             accuracy                           0.73     32768
+            macro avg       0.74      0.73      0.72     32768
+         weighted avg       0.74      0.73      0.72     32768
+
+Saved to ../results/pcam_results.json

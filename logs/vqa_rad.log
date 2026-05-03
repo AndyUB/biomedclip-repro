@@ -1,0 +1,32 @@
+(biomedclip) ➜  src python eval_vqa_rad.py --data_dir ../data/vqa_rad
+
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Train: 1738  Test: 436 (skipped examples with missing images)
+Answer vocabulary size: 422
+Encoding train set...
+Encoding: 100%|██████████████████████████████████████████████████████████████████| 55/55 [00:14<00:00,  3.76it/s]
+Encoding test set...
+Encoding: 100%|██████████████████████████████████████████████████████████████████| 14/14 [00:04<00:00,  3.45it/s]
+
+Training linear classifier for 50 epochs...
+  epoch 10/50  loss=5.7962  train_acc=0.1507
+  epoch 20/50  loss=5.5122  train_acc=0.3124
+  epoch 30/50  loss=5.2363  train_acc=0.3498
+  epoch 40/50  loss=4.9684  train_acc=0.3544
+  epoch 50/50  loss=4.7089  train_acc=0.3475
+
+=== VQA-RAD ===
+Overall accuracy:        42.11%
+Closed-ended accuracy:   48.05%
+Open-ended accuracy:     19.40%

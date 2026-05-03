@@ -1,0 +1,27 @@
+(biomedclip) ➜  src python eval_rsna.py --data_dir ../data/rsna
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+RSNA: 26684 unique patients (6012 pneumonia, 20672 normal)
+
+=== rsna ===
+Accuracy: 0.7927 (79.27%)
+              precision    recall  f1-score   support
+
+ normal lung       0.89      0.83      0.86     20672
+   pneumonia       0.53      0.66      0.59      6012
+
+    accuracy                           0.79     26684
+   macro avg       0.71      0.75      0.73     26684
+weighted avg       0.81      0.79      0.80     26684
+
+Saved to ../results/rsna_results.json

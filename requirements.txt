@@ -1,0 +1,13 @@
+torch
+torchvision
+torchaudio
+open_clip_torch==2.23.0
+transformers==4.35.2
+pillow
+pandas
+numpy
+scikit-learn
+tqdm
+h5py
+pydicom
+matplotlib

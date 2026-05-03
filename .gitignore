@@ -1,0 +1,19 @@
+# Datasets (too large for git)
+data/
+
+# Training checkpoints
+logs/meter_vqa_rad/
+external/METER/checkpoints/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/

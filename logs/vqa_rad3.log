@@ -1,0 +1,45 @@
+(biomedclip) ➜  src python eval_vqa_rad.py --data_dir ../data/vqa_rad
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Train: 1478  Val: 260  Test: 436
+Answer vocabulary: 175 classes (answers with ≥2 train examples)
+METER head parameters: 29,666,479
+
+Training METER head (max 50 epochs, patience=8)...
+  epoch   1  tr_loss=2.8888  tr_acc=0.3650  val_acc=0.4811                                                                    
+  epoch   2  tr_loss=2.2688  tr_acc=0.3903  val_acc=0.4649                                                                    
+  epoch   3  tr_loss=1.7985  tr_acc=0.5012  val_acc=0.5784                                                                    
+  epoch   4  tr_loss=1.3751  tr_acc=0.5986  val_acc=0.6216                                                                    
+  epoch   5  tr_loss=0.9543  tr_acc=0.7356  val_acc=0.5405                                                                    
+  epoch   6  tr_loss=0.6712  tr_acc=0.8211  val_acc=0.6000                                                                    
+  epoch   7  tr_loss=0.4844  tr_acc=0.8702  val_acc=0.6757                                                                    
+  epoch   8  tr_loss=0.3166  tr_acc=0.9184  val_acc=0.6919                                                                    
+  epoch   9  tr_loss=0.2593  tr_acc=0.9319  val_acc=0.6973                                                                    
+  epoch  10  tr_loss=0.1363  tr_acc=0.9707  val_acc=0.7568                                                                    
+  epoch  11  tr_loss=0.1613  tr_acc=0.9501  val_acc=0.7027                                                                    
+  epoch  12  tr_loss=0.1125  tr_acc=0.9731  val_acc=0.7351                                                                    
+  epoch  13  tr_loss=0.0689  tr_acc=0.9842  val_acc=0.7351                                                                    
+  epoch  14  tr_loss=0.0649  tr_acc=0.9857  val_acc=0.7568                                                                    
+  epoch  15  tr_loss=0.0406  tr_acc=0.9913  val_acc=0.7405                                                                    
+  epoch  16  tr_loss=0.0303  tr_acc=0.9952  val_acc=0.7459                                                                    
+  epoch  17  tr_loss=0.0584  tr_acc=0.9857  val_acc=0.7514                                                                    
+  epoch  18  tr_loss=0.0325  tr_acc=0.9960  val_acc=0.7297                                                                    
+  Early stopping at epoch 18 (best val_acc=0.7568)
+
+Loading best checkpoint (val_acc=0.7568)...
+                                                                                                                              
+=== VQA-RAD ===
+Overall accuracy:        51.29%  (paper: 72.70%)
+Closed-ended accuracy:   52.55%  (paper: 76.50%)
+Open-ended accuracy:     45.45%  (paper: 67.00%)
+Token-level F1:          52.68%  (paper: 73.13%)
