@@ -1,0 +1,5 @@
+{
+  "dataset": "lc25000_lung",
+  "accuracy": 0.6523333333333333,
+  "classification_report": "                               precision    recall  f1-score   support\n\n           normal lung tissue       0.92      0.96      0.94      5000\n         lung adenocarcinomas       0.84      0.03      0.06      5000\nlung squamous cell carcinomas       0.50      0.96      0.66      5000\n\n                     accuracy                           0.65     15000\n                    macro avg       0.76      0.65      0.55     15000\n                 weighted avg       0.76      0.65      0.55     15000\n"
+}

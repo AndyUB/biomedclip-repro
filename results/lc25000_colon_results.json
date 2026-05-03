@@ -1,0 +1,5 @@
+{
+  "dataset": "lc25000_colon",
+  "accuracy": 0.9298,
+  "classification_report": "                       precision    recall  f1-score   support\n\nnormal colonic tissue       0.91      0.96      0.93      5000\ncolon adenocarcinomas       0.96      0.90      0.93      5000\n\n             accuracy                           0.93     10000\n            macro avg       0.93      0.93      0.93     10000\n         weighted avg       0.93      0.93      0.93     10000\n"
+}
