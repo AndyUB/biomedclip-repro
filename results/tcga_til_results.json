@@ -1,0 +1,16 @@
+{
+  "dataset": "tcga_til",
+  "auroc": 0.6778145783453047,
+  "accuracy": 0.31078988125967993,
+  "n_total": 1937,
+  "n_positive": 537,
+  "n_negative": 1400,
+  "positive_rate": 0.27723283427981416,
+  "paper_target_auroc": 0.6704,
+  "paper_n_total": 2480,
+  "paper_positive_rate": 0.059,
+  "version_warnings": [
+    "Found 1937 test images; paper reports 2,480. Results may not be directly comparable.",
+    "Positive rate 27.7%; paper reports 5.9%."
+  ]
+}
