@@ -1,0 +1,10 @@
+{
+  "model": "meter_clip16_224_roberta_pretrain",
+  "overall_acc": 0.30275229357798167,
+  "closed_acc": 0.4828897338403042,
+  "open_acc": 0.028901734104046242,
+  "token_f1": 0.30646570554827435,
+  "n_total": 436,
+  "n_closed": 263,
+  "n_open": 173
+}

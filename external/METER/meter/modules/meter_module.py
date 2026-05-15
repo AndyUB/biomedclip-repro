@@ -133,7 +133,13 @@ class METERTransformerSS(pl.LightningModule):
                 state_dict = adapt_position_encoding(state_dict, after=resolution_after, patch_size=self.hparams.config['patch_size'])
             else:
                 state_dict = swin_adapt_position_encoding(state_dict, after=resolution_after, before=config['resolution_before'])
-            self.load_state_dict(state_dict, strict=False)
+            # Filter shape mismatches (e.g. RoBERTa vs PubMedBERT vocab)
+            model_state = self.state_dict()
+            state_dict = {k: v for k, v in state_dict.items()
+                          if k in model_state and v.shape == model_state[k].shape}
+            missing, unexpected = self.load_state_dict(state_dict, strict=False)
+            print(f"Loaded {len(state_dict)} keys from pretrained checkpoint "
+                  f"({len(missing)} missing, {len(unexpected)} unexpected)")
 
 
         if self.hparams.config["loss_names"]["nlvr2"] > 0:
