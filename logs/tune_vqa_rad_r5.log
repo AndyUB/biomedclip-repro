@@ -1,0 +1,314 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+precompute:   0%|          | 0/57 [00:00<?, ?it/s]
+precompute:   0%|          | 0/57 [00:00<?, ?it/s]/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+
+precompute:   2%|▏         | 1/57 [00:12<11:37, 12.46s/it]
+precompute:   2%|▏         | 1/57 [00:12<11:38, 12.47s/it]
+precompute:   4%|▎         | 2/57 [00:12<04:51,  5.30s/it]
+precompute:   4%|▎         | 2/57 [00:12<04:51,  5.30s/it]
+precompute:   5%|▌         | 3/57 [00:13<02:42,  3.00s/it]
+precompute:   5%|▌         | 3/57 [00:13<02:42,  3.01s/it]
+precompute:   7%|▋         | 4/57 [00:13<01:42,  1.93s/it]
+precompute:   7%|▋         | 4/57 [00:13<01:42,  1.93s/it]
+precompute:   9%|▉         | 5/57 [00:13<01:09,  1.34s/it]
+precompute:   9%|▉         | 5/57 [00:13<01:09,  1.33s/it]
+precompute:  11%|█         | 6/57 [00:13<00:49,  1.02it/s]
+precompute:  11%|█         | 6/57 [00:13<00:49,  1.03it/s]
+precompute:  12%|█▏        | 7/57 [00:14<00:37,  1.34it/s]
+precompute:  12%|█▏        | 7/57 [00:14<00:37,  1.34it/s]
+precompute:  14%|█▍        | 8/57 [00:14<00:29,  1.67it/s]
+precompute:  14%|█▍        | 8/57 [00:14<00:29,  1.68it/s]
+precompute:  16%|█▌        | 9/57 [00:14<00:23,  2.00it/s]
+precompute:  16%|█▌        | 9/57 [00:14<00:23,  2.01it/s]
+precompute:  18%|█▊        | 10/57 [00:14<00:20,  2.32it/s]
+precompute:  18%|█▊        | 10/57 [00:14<00:20,  2.33it/s]
+precompute:  19%|█▉        | 11/57 [00:15<00:17,  2.60it/s]
+precompute:  19%|█▉        | 11/57 [00:15<00:17,  2.62it/s]
+precompute:  21%|██        | 12/57 [00:15<00:15,  2.83it/s]
+precompute:  21%|██        | 12/57 [00:15<00:15,  2.86it/s]
+precompute:  23%|██▎       | 13/57 [00:15<00:14,  3.02it/s]
+precompute:  23%|██▎       | 13/57 [00:15<00:14,  3.05it/s]
+precompute:  25%|██▍       | 14/57 [00:16<00:13,  3.17it/s]
+precompute:  25%|██▍       | 14/57 [00:16<00:13,  3.20it/s]
+precompute:  26%|██▋       | 15/57 [00:16<00:12,  3.28it/s]
+precompute:  26%|██▋       | 15/57 [00:16<00:12,  3.31it/s]
+precompute:  28%|██▊       | 16/57 [00:16<00:12,  3.37it/s]
+precompute:  28%|██▊       | 16/57 [00:16<00:12,  3.40it/s]
+precompute:  30%|██▉       | 17/57 [00:16<00:11,  3.42it/s]
+precompute:  30%|██▉       | 17/57 [00:16<00:11,  3.45it/s]
+precompute:  32%|███▏      | 18/57 [00:17<00:11,  3.47it/s]
+precompute:  32%|███▏      | 18/57 [00:17<00:11,  3.50it/s]
+precompute:  33%|███▎      | 19/57 [00:17<00:10,  3.53it/s]
+precompute:  33%|███▎      | 19/57 [00:17<00:10,  3.49it/s]
+precompute:  35%|███▌      | 20/57 [00:17<00:10,  3.56it/s]
+precompute:  35%|███▌      | 20/57 [00:17<00:10,  3.51it/s]
+precompute:  37%|███▋      | 21/57 [00:18<00:10,  3.56it/s]
+precompute:  37%|███▋      | 21/57 [00:18<00:10,  3.52it/s]
+precompute:  39%|███▊      | 22/57 [00:18<00:09,  3.58it/s]
+precompute:  39%|███▊      | 22/57 [00:18<00:09,  3.54it/s]
+precompute:  40%|████      | 23/57 [00:18<00:09,  3.58it/s]
+precompute:  40%|████      | 23/57 [00:18<00:09,  3.54it/s]
+precompute:  42%|████▏     | 24/57 [00:18<00:09,  3.59it/s]
+precompute:  42%|████▏     | 24/57 [00:18<00:09,  3.55it/s]
+precompute:  44%|████▍     | 25/57 [00:19<00:08,  3.60it/s]
+precompute:  44%|████▍     | 25/57 [00:19<00:08,  3.56it/s]
+precompute:  46%|████▌     | 26/57 [00:19<00:08,  3.60it/s]
+precompute:  46%|████▌     | 26/57 [00:19<00:08,  3.56it/s]
+precompute:  47%|████▋     | 27/57 [00:19<00:08,  3.60it/s]
+precompute:  47%|████▋     | 27/57 [00:19<00:08,  3.56it/s]
+precompute:  49%|████▉     | 28/57 [00:19<00:08,  3.60it/s]
+precompute:  49%|████▉     | 28/57 [00:20<00:08,  3.54it/s]
+precompute:  51%|█████     | 29/57 [00:20<00:07,  3.60it/s]
+precompute:  51%|█████     | 29/57 [00:20<00:07,  3.55it/s]
+precompute:  53%|█████▎    | 30/57 [00:20<00:07,  3.52it/s]
+precompute:  53%|█████▎    | 30/57 [00:20<00:07,  3.51it/s]
+precompute:  54%|█████▍    | 31/57 [00:20<00:07,  3.55it/s]
+precompute:  54%|█████▍    | 31/57 [00:20<00:07,  3.53it/s]
+precompute:  56%|█████▌    | 32/57 [00:21<00:07,  3.57it/s]
+precompute:  56%|█████▌    | 32/57 [00:21<00:07,  3.52it/s]
+precompute:  58%|█████▊    | 33/57 [00:21<00:06,  3.56it/s]
+precompute:  58%|█████▊    | 33/57 [00:21<00:06,  3.54it/s]
+precompute:  60%|█████▉    | 34/57 [00:21<00:06,  3.57it/s]
+precompute:  60%|█████▉    | 34/57 [00:21<00:06,  3.56it/s]
+precompute:  61%|██████▏   | 35/57 [00:21<00:06,  3.58it/s]
+precompute:  61%|██████▏   | 35/57 [00:22<00:06,  3.56it/s]
+precompute:  63%|██████▎   | 36/57 [00:22<00:05,  3.59it/s]
+precompute:  63%|██████▎   | 36/57 [00:22<00:05,  3.57it/s]
+precompute:  65%|██████▍   | 37/57 [00:22<00:05,  3.59it/s]
+precompute:  65%|██████▍   | 37/57 [00:22<00:05,  3.57it/s]
+precompute:  67%|██████▋   | 38/57 [00:22<00:05,  3.58it/s]
+precompute:  67%|██████▋   | 38/57 [00:22<00:05,  3.56it/s]
+precompute:  68%|██████▊   | 39/57 [00:23<00:05,  3.59it/s]
+precompute:  68%|██████▊   | 39/57 [00:23<00:05,  3.56it/s]
+precompute:  70%|███████   | 40/57 [00:23<00:04,  3.59it/s]
+precompute:  70%|███████   | 40/57 [00:23<00:04,  3.56it/s]
+precompute:  72%|███████▏  | 41/57 [00:23<00:04,  3.59it/s]
+precompute:  72%|███████▏  | 41/57 [00:23<00:04,  3.56it/s]
+precompute:  74%|███████▎  | 42/57 [00:23<00:04,  3.59it/s]
+precompute:  74%|███████▎  | 42/57 [00:23<00:04,  3.55it/s]
+precompute:  75%|███████▌  | 43/57 [00:24<00:03,  3.59it/s]
+precompute:  75%|███████▌  | 43/57 [00:24<00:03,  3.55it/s]
+precompute:  77%|███████▋  | 44/57 [00:24<00:03,  3.59it/s]
+precompute:  77%|███████▋  | 44/57 [00:24<00:03,  3.53it/s]
+precompute:  79%|███████▉  | 45/57 [00:24<00:03,  3.59it/s]
+precompute:  79%|███████▉  | 45/57 [00:24<00:03,  3.54it/s]
+precompute:  81%|████████  | 46/57 [00:24<00:03,  3.60it/s]
+precompute:  81%|████████  | 46/57 [00:25<00:03,  3.54it/s]
+precompute:  82%|████████▏ | 47/57 [00:25<00:02,  3.60it/s]
+precompute:  82%|████████▏ | 47/57 [00:25<00:02,  3.55it/s]
+precompute:  84%|████████▍ | 48/57 [00:25<00:02,  3.59it/s]
+precompute:  84%|████████▍ | 48/57 [00:25<00:02,  3.55it/s]
+precompute:  86%|████████▌ | 49/57 [00:25<00:02,  3.60it/s]
+precompute:  86%|████████▌ | 49/57 [00:25<00:02,  3.55it/s]
+precompute:  88%|████████▊ | 50/57 [00:26<00:01,  3.60it/s]
+precompute:  88%|████████▊ | 50/57 [00:26<00:01,  3.56it/s]
+precompute:  89%|████████▉ | 51/57 [00:26<00:01,  3.60it/s]
+precompute:  89%|████████▉ | 51/57 [00:26<00:01,  3.56it/s]
+precompute:  91%|█████████ | 52/57 [00:26<00:01,  3.60it/s]
+precompute:  91%|█████████ | 52/57 [00:26<00:01,  3.56it/s]
+precompute:  93%|█████████▎| 53/57 [00:26<00:01,  3.60it/s]
+precompute:  93%|█████████▎| 53/57 [00:27<00:01,  3.56it/s]
+precompute:  95%|█████████▍| 54/57 [00:27<00:00,  3.60it/s]
+precompute:  95%|█████████▍| 54/57 [00:27<00:00,  3.56it/s]
+precompute:  96%|█████████▋| 55/57 [00:27<00:00,  3.60it/s]
+precompute:  96%|█████████▋| 55/57 [00:27<00:00,  3.56it/s]
+precompute:  98%|█████████▊| 56/57 [00:27<00:00,  3.60it/s]
+precompute:  98%|█████████▊| 56/57 [00:27<00:00,  3.55it/s]
+                                                           
+
+                                                           
+
+precompute:   0%|          | 0/15 [00:00<?, ?it/s]
+precompute:   0%|          | 0/15 [00:00<?, ?it/s]/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+
+precompute:   7%|▋         | 1/15 [00:12<02:51, 12.22s/it]
+precompute:   7%|▋         | 1/15 [00:12<02:50, 12.19s/it]
+precompute:  13%|█▎        | 2/15 [00:12<01:07,  5.20s/it]
+precompute:  13%|█▎        | 2/15 [00:12<01:07,  5.19s/it]
+precompute:  20%|██        | 3/15 [00:12<00:35,  2.95s/it]
+precompute:  20%|██        | 3/15 [00:12<00:35,  2.95s/it]
+precompute:  27%|██▋       | 4/15 [00:13<00:20,  1.90s/it]
+precompute:  27%|██▋       | 4/15 [00:13<00:20,  1.89s/it]
+precompute:  33%|███▎      | 5/15 [00:13<00:13,  1.32s/it]
+precompute:  33%|███▎      | 5/15 [00:13<00:13,  1.31s/it]
+precompute:  40%|████      | 6/15 [00:13<00:08,  1.04it/s]
+precompute:  40%|████      | 6/15 [00:13<00:08,  1.04it/s]
+precompute:  47%|████▋     | 7/15 [00:13<00:05,  1.35it/s]
+precompute:  47%|████▋     | 7/15 [00:13<00:05,  1.35it/s]
+precompute:  53%|█████▎    | 8/15 [00:14<00:04,  1.69it/s]
+precompute:  53%|█████▎    | 8/15 [00:14<00:04,  1.69it/s]
+precompute:  60%|██████    | 9/15 [00:14<00:02,  2.02it/s]
+precompute:  60%|██████    | 9/15 [00:14<00:02,  2.02it/s]
+precompute:  67%|██████▋   | 10/15 [00:14<00:02,  2.34it/s]
+precompute:  67%|██████▋   | 10/15 [00:14<00:02,  2.33it/s]
+precompute:  73%|███████▎  | 11/15 [00:15<00:01,  2.62it/s]
+precompute:  73%|███████▎  | 11/15 [00:15<00:01,  2.61it/s]
+precompute:  80%|████████  | 12/15 [00:15<00:01,  2.86it/s]
+precompute:  80%|████████  | 12/15 [00:15<00:01,  2.84it/s]
+precompute:  87%|████████▋ | 13/15 [00:15<00:00,  3.05it/s]
+precompute:  87%|████████▋ | 13/15 [00:15<00:00,  3.03it/s]
+precompute:  93%|█████████▎| 14/15 [00:15<00:00,  3.20it/s]
+precompute:  93%|█████████▎| 14/15 [00:15<00:00,  3.17it/s]
+                                                           
+
+                                                           
+
+Round 5: 12 configs across 2 GPUs (6 + 6).
+n_layers=2 fixed. collapse_check starts ep8
+[GPU0] Precomputing features...
+[GPU1] Precomputing features...
+[GPU1] Features ready. Running 6 configs.
+[GPU1] [2/12] lr=2e-05 bs=16 dropout=0.05
+[GPU0] Features ready. Running 6 configs.
+[GPU0] [1/12] lr=2e-05 bs=16 dropout=0.02
+[GPU1]   55.96% overall  50.00% open  [best@ep100]  (1068s)
+[GPU1] [4/12] lr=2e-05 bs=32 dropout=0.05
+[GPU0]   55.96% overall  48.39% open  [best@ep25]  (1086s)
+[GPU0] [3/12] lr=2e-05 bs=32 dropout=0.02
+[GPU1]   54.74% overall  51.61% open  [best@ep40]  (1006s)
+[GPU1] [6/12] lr=3e-05 bs=16 dropout=0.05
+[GPU0]   55.35% overall  48.39% open  [best@ep85]  (1022s)
+[GPU0] [5/12] lr=3e-05 bs=16 dropout=0.02
+[GPU1]   58.41% overall  50.00% open  [best@ep55]  (1071s)
+[GPU1] [8/12] lr=3e-05 bs=32 dropout=0.05
+[GPU0]   59.02% overall  51.61% open  [best@ep55]  (1092s)
+[GPU0] [7/12] lr=3e-05 bs=32 dropout=0.02
+[GPU1]   56.57% overall  50.00% open  [best@ep70]  (1007s)
+[GPU1] [10/12] lr=5e-05 bs=16 dropout=0.05
+[GPU0]   56.27% overall  48.39% open  [best@ep25]  (1027s)
+[GPU0] [9/12] lr=5e-05 bs=16 dropout=0.02
+[GPU1]   58.10% overall  48.39% open  [best@ep50]  (1070s)
+[GPU1] [12/12] lr=5e-05 bs=32 dropout=0.05
+[GPU0]   58.72% overall  50.00% open  [best@ep120]  (1091s)
+[GPU0] [11/12] lr=5e-05 bs=32 dropout=0.02
+[GPU1]   57.49% overall  50.00% open  [best@ep60]  (1004s)
+[GPU0]   59.33% overall  51.61% open  [best@ep55]  (1022s)
+
+=== Best: n_layers=2 lr=5e-05 bs=32 → 59.33% overall ===
+Notes:   /home/yhruan/courses/428/biomedclip-repro/src/../notes/vqa_rad_tuning_r5.md
+Results: /home/yhruan/courses/428/biomedclip-repro/src/../results/tuning_results_r5.json
+

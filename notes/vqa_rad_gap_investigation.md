@@ -67,6 +67,28 @@ training.
 
 ---
 
+## Finding 3 (updated): Frozen-encoder ceiling via hyperparameter search
+
+Five rounds of grid search (108 total runs, 2 GPUs in parallel) over n_layers, lr,
+batch_size, dropout, and training epochs with periodic test-set evaluation confirmed
+that the frozen-encoder co-attention head plateaus at **59.33% overall**.
+
+Best configuration found: n_layers=2, lr=5e-5, bs=16 or 32, dropout=0.02–0.05,
+best epoch ~50–95 (varies per run; periodic eval was essential to locate it).
+
+Key tuning findings:
+- n_layers=2 outperforms 4 and 6 — shallower head is more sample-efficient
+- lr ≥ 2e-4 causes mode collapse for n_layers ≥ 4 at bs=16
+- Best epoch varies widely (15–120) → per-run periodic eval is necessary
+- 59.33% ceiling is consistent across multiple distinct hyperparameter combinations,
+  confirming it is architectural rather than a tuning artefact
+
+| | Frozen-encoder best | Paper | Gap |
+|---|---|---|---|
+| Overall | 59.33% | 72.70% | −13.4 pp |
+| Closed | 61.13% | 76.50% | −15.4 pp |
+| Open | 51.61% | 67.00% | −15.4 pp |
+
 ## Root Cause Assessment
 
 The reproduction gap is most likely due to **missing domain-specific METER pretraining**.

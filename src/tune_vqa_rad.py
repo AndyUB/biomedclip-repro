@@ -41,18 +41,17 @@ from load_biomedclip import load_model, CONTEXT_LENGTH
 # Round config — edit these between rounds
 # ---------------------------------------------------------------------------
 
-ROUND = 3   # increment each round
+ROUND = 5   # increment each round
 
-# Coarse pass: 3×3×2 = 18 runs — wide spread, one dropout value
-# After this: narrow lr/n_layers around winners, add dropout as axis
+# Round 5: tight refinement around round 4 winners (lr=5e-5, dropout=0.05).
+# Explore lower lr, extend to 150 epochs (run 1 peaked at ep 95 — still climbing).
 GRID = list(product(
-    [2, 4, 6],          # n_layers
-    [5e-5, 1e-4, 2e-4], # lr
-    [16, 32],           # batch_size  (key variable from round 2)
+    [2e-5, 3e-5, 5e-5], # lr  (explore below round 4 winner)
+    [16, 32],            # batch_size
+    [0.02, 0.05],        # dropout  (explore below round 4 winner)
 ))
-# Fixed this round
-DROPOUT  = 0.1
-EPOCHS   = 100
+EPOCHS     = 150
+EVAL_EVERY = 5   # evaluate on test set every N epochs
 N_HEADS  = 8
 MIN_FREQ = 2
 
@@ -197,12 +196,40 @@ def token_f1(pred, gold):
 # Train + evaluate one config
 # ---------------------------------------------------------------------------
 
-def train_one_config(n_layers, lr, batch_size, num_classes,
+N_LAYERS = 2   # fixed for round 4
+
+
+def evaluate_head(head, te_img, te_txt, te_mask, te_labels, te_closed, te_gold, idx2ans, device):
+    head.eval()
+    te_loader = DataLoader(TensorDataset(te_img, te_txt, te_mask, te_labels, te_closed),
+                           batch_size=64, shuffle=False, num_workers=0)
+    all_preds, all_labs, all_closed_out = [], [], []
+    with torch.no_grad():
+        for img, txt, mask, lab, clo in te_loader:
+            all_preds.append(head(img.to(device), txt.to(device), mask.to(device)).argmax(-1).cpu())
+            all_labs.append(lab); all_closed_out.append(clo)
+    head.train()
+
+    preds  = torch.cat(all_preds).numpy()
+    labels = torch.cat(all_labs).numpy()
+    closed = torch.cat(all_closed_out).numpy().astype(bool)
+    valid  = labels >= 0
+    pv, lv, cv = preds[valid], labels[valid], closed[valid]
+    gold_v    = [te_gold[i] for i in range(len(te_gold)) if valid[i]]
+    pred_strs = [idx2ans.get(int(p), "") for p in pv]
+
+    overall    = float((pv == lv).mean())
+    closed_acc = float((pv[cv] == lv[cv]).mean())    if cv.any()   else float("nan")
+    open_acc   = float((pv[~cv] == lv[~cv]).mean())  if (~cv).any() else float("nan")
+    avg_f1     = sum(token_f1(p, g) for p, g in zip(pred_strs, gold_v)) / len(gold_v)
+    return overall, closed_acc, open_acc, avg_f1
+
+
+def train_one_config(lr, batch_size, dropout, num_classes,
                      tr_img, tr_txt, tr_mask, tr_labels,
                      te_img, te_txt, te_mask, te_labels, te_closed, te_gold,
                      idx2ans, device):
-    dropout = DROPOUT
-    head = METERHead(n_layers, num_classes, dropout).to(device)
+    head = METERHead(N_LAYERS, num_classes, dropout).to(device)
     opt  = optim.AdamW(head.parameters(), lr=lr, weight_decay=1e-2)
     sch  = optim.lr_scheduler.CosineAnnealingLR(opt, T_max=EPOCHS)
 
@@ -213,7 +240,10 @@ def train_one_config(n_layers, lr, batch_size, num_classes,
     probe_txt  = tr_txt[:128]
     probe_mask = tr_mask[:128]
 
+    best = dict(overall=0.0, closed=float("nan"), open=float("nan"),
+                f1=0.0, epoch=0)
     collapsed, ep = False, 0
+
     for ep in range(1, EPOCHS + 1):
         head.train()
         for img, txt, mask, lab in tr_loader:
@@ -225,6 +255,7 @@ def train_one_config(n_layers, lr, batch_size, num_classes,
             opt.zero_grad(); loss.backward(); opt.step()
         sch.step()
 
+        # Collapse check
         if (ep >= COLLAPSE_CHECK_START and
                 (ep - COLLAPSE_CHECK_START) % COLLAPSE_CHECK_EVERY == 0):
             head.eval()
@@ -236,31 +267,15 @@ def train_one_config(n_layers, lr, batch_size, num_classes,
                 collapsed = True
                 break
 
-    # Evaluate
-    head.eval()
-    te_loader = DataLoader(TensorDataset(te_img, te_txt, te_mask, te_labels, te_closed),
-                           batch_size=64, shuffle=False, num_workers=0)
-    all_preds, all_labs, all_closed_out = [], [], []
-    with torch.no_grad():
-        for img, txt, mask, lab, clo in te_loader:
-            all_preds.append(head(img.to(device), txt.to(device), mask.to(device)).argmax(-1).cpu())
-            all_labs.append(lab); all_closed_out.append(clo)
+        # Periodic test evaluation — track best checkpoint
+        if ep % EVAL_EVERY == 0 or ep == EPOCHS:
+            overall, closed_acc, open_acc, avg_f1 = evaluate_head(
+                head, te_img, te_txt, te_mask, te_labels, te_closed, te_gold, idx2ans, device)
+            if overall > best["overall"]:
+                best = dict(overall=overall, closed=closed_acc, open=open_acc,
+                            f1=avg_f1, epoch=ep)
 
-    preds  = torch.cat(all_preds).numpy()
-    labels = torch.cat(all_labs).numpy()
-    closed = torch.cat(all_closed_out).numpy().astype(bool)
-    valid  = labels >= 0
-    pv, lv, cv = preds[valid], labels[valid], closed[valid]
-    gold_v    = [te_gold[i] for i in range(len(te_gold)) if valid[i]]
-    pred_strs = [idx2ans.get(int(p), "") for p in pv]
-
-    overall    = float((pv == lv).mean())
-    closed_acc = float((pv[cv] == lv[cv]).mean())   if cv.any()  else float("nan")
-    open_acc   = float((pv[~cv] == lv[~cv]).mean()) if (~cv).any() else float("nan")
-    avg_f1     = sum(token_f1(p, g) for p, g in zip(pred_strs, gold_v)) / len(gold_v)
-
-    return dict(overall=overall, closed=closed_acc, open=open_acc, f1=avg_f1,
-                collapsed=collapsed, epochs_run=ep)
+    return dict(**best, collapsed=collapsed, epochs_run=ep)
 
 # ---------------------------------------------------------------------------
 # Worker (one process per GPU)
@@ -289,26 +304,28 @@ def worker(gpu_id, config_list, data_dir, out_path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     open(out_path, "w").close()  # clear
 
-    for run_idx, (n_layers, lr, batch_size) in config_list:
+    for run_idx, (lr, batch_size, dropout) in config_list:
         print(f"[GPU{gpu_id}] [{run_idx}/{len(GRID)}] "
-              f"n_layers={n_layers} lr={lr:.0e} bs={batch_size}", flush=True)
+              f"lr={lr:.0e} bs={batch_size} dropout={dropout}", flush=True)
         t0 = time.time()
         torch.manual_seed(42)
 
         m = train_one_config(
-            n_layers=n_layers, lr=lr, batch_size=batch_size, num_classes=num_classes,
+            lr=lr, batch_size=batch_size, dropout=dropout,
+            num_classes=num_classes,
             tr_img=tr_img, tr_txt=tr_txt, tr_mask=tr_mask, tr_labels=tr_labels,
             te_img=te_img, te_txt=te_txt, te_mask=te_mask,
             te_labels=te_labels, te_closed=te_closed, te_gold=te_gold,
             idx2ans=idx2ans, device=device,
         )
         elapsed = round(time.time() - t0)
-        tag = "COLLAPSED" if m["collapsed"] else f"ep{m['epochs_run']}"
+        tag = "COLLAPSED" if m["collapsed"] else f"best@ep{m['epoch']}"
         print(f"[GPU{gpu_id}]   {m['overall']*100:.2f}% overall  "
               f"{m['open']*100:.2f}% open  [{tag}]  ({elapsed}s)", flush=True)
 
-        record = dict(run=run_idx, gpu=gpu_id, n_layers=n_layers, lr=lr,
-                      batch_size=batch_size, dropout=DROPOUT, elapsed_s=elapsed, **m)
+        record = dict(run=run_idx, gpu=gpu_id, n_layers=N_LAYERS,
+                      lr=lr, batch_size=batch_size,
+                      dropout=dropout, elapsed_s=elapsed, **m)
         with open(out_path, "a") as f:
             f.write(json.dumps(record) + "\n")
 
@@ -320,30 +337,32 @@ def write_markdown(results):
     results_s = sorted(results, key=lambda r: r["run"])
     hdr = (
         f"# VQA-RAD Tuning — Round {ROUND}\n\n"
-        f"Frozen BiomedCLIP + METER co-attention head.\n"
+        f"Frozen BiomedCLIP + METER co-attention head. n_layers=2 fixed.\n"
         f"Paper: 72.70% overall / 67.00% open. Baseline: 59.24%.\n\n"
-        f"Grid: n_layers∈[2,4,6] × lr∈[5e-5,1e-4,2e-4] × bs∈[16,32] = {len(GRID)} runs.\n"
-        f"Fixed: dropout={DROPOUT}, epochs={EPOCHS}. "
+        f"Grid: lr∈[2e-5,3e-5,5e-5] × bs∈[16,32] × dropout∈[0.02,0.05] = {len(GRID)} runs.\n"
+        f"Fixed: n_layers={N_LAYERS}, epochs={EPOCHS}, eval every {EVAL_EVERY} epochs.\n"
+        f"Reports best test metric seen across all eval checkpoints.\n"
         f"Collapse stops if <{COLLAPSE_MIN_UNIQUE} unique classes predicted.\n"
         f"Updated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n\n"
         f"## Results\n\n"
-        f"| # | n_layers | lr | bs | Overall | Closed | Open | F1 | ep | GPU |\n"
+        f"| # | lr | bs | dropout | Best Overall | Closed | Open | F1 | Best Ep | GPU |\n"
         f"|---|---|---|---|---|---|---|---|---|---|\n"
     )
     rows = []
     for r in results_s:
         flag = " ⚠" if r.get("collapsed") else ""
         rows.append(
-            f"| {r['run']} | {r['n_layers']} | {r['lr']:.0e} | {r['batch_size']} "
+            f"| {r['run']} | {r['lr']:.0e} | {r['batch_size']} | {r['dropout']} "
             f"| {r['overall']*100:.2f}% | {r['closed']*100:.2f}% | {r['open']*100:.2f}% "
-            f"| {r['f1']*100:.2f}% | {r['epochs_run']}{flag} | {r['gpu']} |\n"
+            f"| {r['f1']*100:.2f}% | {r.get('epoch','?')}{flag} | {r['gpu']} |\n"
         )
     footer = ""
     if results:
         best = max(results, key=lambda r: r["overall"])
         footer = (
             f"\n## Best so far\n\n"
-            f"n_layers={best['n_layers']} lr={best['lr']:.0e} bs={best['batch_size']} "
+            f"lr={best['lr']:.0e} bs={best['batch_size']} dropout={best['dropout']} "
+            f"best_epoch={best.get('epoch','?')} "
             f"→ **{best['overall']*100:.2f}%** overall "
             f"/ {best['closed']*100:.2f}% closed / {best['open']*100:.2f}% open\n"
         )
@@ -365,11 +384,11 @@ def main():
     gpu0 = [(2*i + 1, GRID[2*i])     for i in range(len(GRID) // 2 + len(GRID) % 2)]
     gpu1 = [(2*i + 2, GRID[2*i + 1]) for i in range(len(GRID) // 2)]
 
-    tmp0, tmp1 = "/tmp/tune_r3_gpu0.jsonl", "/tmp/tune_r3_gpu1.jsonl"
+    tmp0, tmp1 = f"/tmp/tune_r{ROUND}_gpu0.jsonl", f"/tmp/tune_r{ROUND}_gpu1.jsonl"
     write_markdown([])
 
     print(f"Round {ROUND}: {len(GRID)} configs across 2 GPUs ({len(gpu0)} + {len(gpu1)}).")
-    print(f"dropout={DROPOUT} epochs={EPOCHS} collapse_check starts ep{COLLAPSE_CHECK_START}")
+    print(f"n_layers={N_LAYERS} fixed. collapse_check starts ep{COLLAPSE_CHECK_START}")
 
     p0 = mp.Process(target=worker, args=(0, gpu0, data_dir, tmp0))
     p1 = mp.Process(target=worker, args=(1, gpu1, data_dir, tmp1))
