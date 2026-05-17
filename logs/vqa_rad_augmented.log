@@ -1,0 +1,61 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/features.py:4: FutureWarning: Importing from timm.models.features is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+WARNING - root - Changed type of config entry "max_steps" from int to NoneType
+WARNING - METER - No observers have been added to this run
+INFO - METER - Running command 'main'
+INFO - METER - Started
+Seed set to 0
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+INFO - root - Loaded hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 model config.
+INFO - root - Loading pretrained hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 weights (/home/yhruan/.cache/huggingface/hub/models--microsoft--BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/snapshots/9f341de24bfb00180f1b847274256e9b65a3a32e/open_clip_pytorch_model.bin).
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:579: You passed `deterministic=True` and `benchmark=True`. Note that PyTorch ignores torch.backends.cudnn.deterministic=True when torch.backends.cudnn.benchmark=True.
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python run_vqa_rad.py with task_finetune_vqa_rad_biomedclip ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+ERROR - METER - Failed after 0:00:07!
+Traceback (most recent calls WITHOUT Sacred internals):
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/run_vqa_rad.py", line 94, in main
+    trainer.fit(model, datamodule=dm)
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 584, in fit
+    call._call_and_handle_interrupt(
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1039, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 108, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 199, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datamodules/multitask_datamodule.py", line 34, in setup
+    dm.setup(stage)
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datamodules/vqa_rad_datamodule.py", line 20, in setup
+    super().setup(stage)
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datamodules/datamodule_base.py", line 149, in setup
+    self.set_train_dataset()
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datamodules/datamodule_base.py", line 83, in set_train_dataset
+    self.train_dataset = self.dataset_cls(
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datasets/vqa_rad_dataset.py", line 18, in __init__
+    super().__init__(
+  File "/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datasets/base_dataset.py", line 59, in __init__
+    self.table_names += [name] * len(tables[i])
+IndexError: list index out of range
+
+
+ERROR conda.cli.main_run:execute(125): `conda run python run_vqa_rad.py with task_finetune_vqa_rad_biomedclip data_root= per_gpu_batchsize=32 num_workers=4` failed. (See above for error)

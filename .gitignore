@@ -1,9 +1,11 @@
 # Datasets (too large for git)
 data/
 
-# Training checkpoints
+# Training checkpoints (model weights, too large for git)
 logs/meter_vqa_rad/
+logs/meter_slake/
 external/METER/checkpoints/
+external/METER/result/finetune_vqa_rad_seed0/
 
 # Python artifacts
 __pycache__/

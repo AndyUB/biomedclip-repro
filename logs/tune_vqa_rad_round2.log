@@ -1,0 +1,154 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+precomputing features:   0%|          | 0/57 [00:00<?, ?it/s]
+precomputing features:   2%|▏         | 1/57 [00:01<00:59,  1.06s/it]
+precomputing features:   4%|▎         | 2/57 [00:01<00:33,  1.66it/s]
+precomputing features:   5%|▌         | 3/57 [00:01<00:24,  2.20it/s]
+precomputing features:   7%|▋         | 4/57 [00:01<00:20,  2.60it/s]
+precomputing features:   9%|▉         | 5/57 [00:02<00:18,  2.88it/s]
+precomputing features:  11%|█         | 6/57 [00:02<00:16,  3.08it/s]
+precomputing features:  12%|█▏        | 7/57 [00:02<00:15,  3.23it/s]
+precomputing features:  14%|█▍        | 8/57 [00:03<00:14,  3.34it/s]
+precomputing features:  16%|█▌        | 9/57 [00:03<00:14,  3.42it/s]
+precomputing features:  18%|█▊        | 10/57 [00:03<00:13,  3.46it/s]
+precomputing features:  19%|█▉        | 11/57 [00:03<00:13,  3.50it/s]
+precomputing features:  21%|██        | 12/57 [00:04<00:12,  3.52it/s]
+precomputing features:  23%|██▎       | 13/57 [00:04<00:12,  3.53it/s]
+precomputing features:  25%|██▍       | 14/57 [00:04<00:12,  3.54it/s]
+precomputing features:  26%|██▋       | 15/57 [00:04<00:11,  3.55it/s]
+precomputing features:  28%|██▊       | 16/57 [00:05<00:11,  3.56it/s]
+precomputing features:  30%|██▉       | 17/57 [00:05<00:11,  3.56it/s]
+precomputing features:  32%|███▏      | 18/57 [00:05<00:10,  3.57it/s]
+precomputing features:  33%|███▎      | 19/57 [00:06<00:10,  3.57it/s]
+precomputing features:  35%|███▌      | 20/57 [00:06<00:10,  3.57it/s]
+precomputing features:  37%|███▋      | 21/57 [00:06<00:10,  3.57it/s]
+precomputing features:  39%|███▊      | 22/57 [00:06<00:09,  3.57it/s]
+precomputing features:  40%|████      | 23/57 [00:07<00:09,  3.57it/s]
+precomputing features:  42%|████▏     | 24/57 [00:07<00:09,  3.57it/s]
+precomputing features:  44%|████▍     | 25/57 [00:07<00:08,  3.57it/s]
+precomputing features:  46%|████▌     | 26/57 [00:08<00:08,  3.57it/s]
+precomputing features:  47%|████▋     | 27/57 [00:08<00:08,  3.56it/s]
+precomputing features:  49%|████▉     | 28/57 [00:08<00:08,  3.56it/s]
+precomputing features:  51%|█████     | 29/57 [00:08<00:07,  3.56it/s]
+precomputing features:  53%|█████▎    | 30/57 [00:09<00:07,  3.56it/s]
+precomputing features:  54%|█████▍    | 31/57 [00:09<00:07,  3.56it/s]
+precomputing features:  56%|█████▌    | 32/57 [00:09<00:07,  3.56it/s]
+precomputing features:  58%|█████▊    | 33/57 [00:10<00:06,  3.56it/s]
+precomputing features:  60%|█████▉    | 34/57 [00:10<00:06,  3.56it/s]
+precomputing features:  61%|██████▏   | 35/57 [00:10<00:06,  3.56it/s]
+precomputing features:  63%|██████▎   | 36/57 [00:10<00:05,  3.56it/s]
+precomputing features:  65%|██████▍   | 37/57 [00:11<00:05,  3.57it/s]
+precomputing features:  67%|██████▋   | 38/57 [00:11<00:05,  3.57it/s]
+precomputing features:  68%|██████▊   | 39/57 [00:11<00:05,  3.57it/s]
+precomputing features:  70%|███████   | 40/57 [00:11<00:04,  3.57it/s]
+precomputing features:  72%|███████▏  | 41/57 [00:12<00:04,  3.56it/s]
+precomputing features:  74%|███████▎  | 42/57 [00:12<00:04,  3.56it/s]
+precomputing features:  75%|███████▌  | 43/57 [00:12<00:03,  3.56it/s]
+precomputing features:  77%|███████▋  | 44/57 [00:13<00:03,  3.56it/s]
+precomputing features:  79%|███████▉  | 45/57 [00:13<00:03,  3.56it/s]
+precomputing features:  81%|████████  | 46/57 [00:13<00:03,  3.56it/s]
+precomputing features:  82%|████████▏ | 47/57 [00:13<00:02,  3.56it/s]
+precomputing features:  84%|████████▍ | 48/57 [00:14<00:02,  3.56it/s]
+precomputing features:  86%|████████▌ | 49/57 [00:14<00:02,  3.56it/s]
+precomputing features:  88%|████████▊ | 50/57 [00:14<00:01,  3.56it/s]
+precomputing features:  89%|████████▉ | 51/57 [00:15<00:01,  3.55it/s]
+precomputing features:  91%|█████████ | 52/57 [00:15<00:01,  3.56it/s]
+precomputing features:  93%|█████████▎| 53/57 [00:15<00:01,  3.55it/s]
+precomputing features:  95%|█████████▍| 54/57 [00:15<00:00,  3.56it/s]
+precomputing features:  96%|█████████▋| 55/57 [00:16<00:00,  3.56it/s]
+precomputing features:  98%|█████████▊| 56/57 [00:16<00:00,  3.56it/s]
+precomputing features: 100%|██████████| 57/57 [00:16<00:00,  3.43it/s]
+
+precomputing features:   0%|          | 0/15 [00:00<?, ?it/s]
+precomputing features:   7%|▋         | 1/15 [00:00<00:13,  1.02it/s]
+precomputing features:  13%|█▎        | 2/15 [00:01<00:07,  1.73it/s]
+precomputing features:  20%|██        | 3/15 [00:01<00:05,  2.26it/s]
+precomputing features:  27%|██▋       | 4/15 [00:01<00:04,  2.65it/s]
+precomputing features:  33%|███▎      | 5/15 [00:02<00:03,  2.88it/s]
+precomputing features:  40%|████      | 6/15 [00:02<00:02,  3.08it/s]
+precomputing features:  47%|████▋     | 7/15 [00:02<00:02,  3.23it/s]
+precomputing features:  53%|█████▎    | 8/15 [00:02<00:02,  3.34it/s]
+precomputing features:  60%|██████    | 9/15 [00:03<00:01,  3.40it/s]
+precomputing features:  67%|██████▋   | 10/15 [00:03<00:01,  3.46it/s]
+precomputing features:  73%|███████▎  | 11/15 [00:03<00:01,  3.49it/s]
+precomputing features:  80%|████████  | 12/15 [00:04<00:00,  3.51it/s]
+precomputing features:  87%|████████▋ | 13/15 [00:04<00:00,  3.53it/s]
+precomputing features:  93%|█████████▎| 14/15 [00:04<00:00,  3.54it/s]
+precomputing features: 100%|██████████| 15/15 [00:04<00:00,  3.09it/s]
+
+Train: 1797  Test: 451
+Answer vocab: 221 classes
+
+Precomputing train features...
+  img: (1797, 197, 768)  txt: (1797, 256, 768)
+Precomputing test features...
+  img: (451, 197, 768)  txt: (451, 256, 768)
+
+[1/18] n_layers=6  lr=1e-04  dropout=0.1
+  overall=53.82%  closed=55.47%  open=46.77%  f1=55.51%  (1228s)
+
+[2/18] n_layers=6  lr=1e-04  dropout=0.2
+  overall=55.05%  closed=58.11%  open=41.94%  f1=56.00%  (1229s)
+
+[3/18] n_layers=6  lr=2e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1228s)
+
+[4/18] n_layers=6  lr=2e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1228s)
+
+[5/18] n_layers=6  lr=3e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1227s)
+
+[6/18] n_layers=6  lr=3e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1228s)
+
+[7/18] n_layers=8  lr=1e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1630s)
+
+[8/18] n_layers=8  lr=1e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1631s)
+
+[9/18] n_layers=8  lr=2e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1630s)
+
+[10/18] n_layers=8  lr=2e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1631s)
+
+[11/18] n_layers=8  lr=3e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1631s)
+
+[12/18] n_layers=8  lr=3e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (1631s)
+
+[13/18] n_layers=12  lr=1e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2435s)
+
+[14/18] n_layers=12  lr=1e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2436s)
+
+[15/18] n_layers=12  lr=2e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2435s)
+
+[16/18] n_layers=12  lr=2e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2437s)
+
+[17/18] n_layers=12  lr=3e-04  dropout=0.1
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2436s)
+
+[18/18] n_layers=12  lr=3e-04  dropout=0.2
+  overall=40.67%  closed=50.19%  open=0.00%  f1=40.67%  (2437s)
+
+=== Best: n_layers=6 lr=1e-04 dropout=0.2 → 55.05% overall ===
+Results saved to /home/yhruan/courses/428/biomedclip-repro/src/../notes/vqa_rad_tuning.md and /home/yhruan/courses/428/biomedclip-repro/src/../results/tuning_results.json
+

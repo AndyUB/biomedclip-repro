@@ -1,0 +1,14 @@
+{
+  "model": "",
+  "overall_acc": 0.2889908256880734,
+  "closed_acc": 0.4790874524714829,
+  "open_acc": 0.0,
+  "token_f1": 0.2889908256880734,
+  "n_total": 436,
+  "n_closed": 263,
+  "n_open": 173,
+  "tag": "lr1e-04_head50_xmod5",
+  "lr": 0.0001,
+  "lr_mult_head": 50,
+  "lr_mult_cross_modal": 5
+}

@@ -1,0 +1,100 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/helpers.py:7: FutureWarning: Importing from timm.models.helpers is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/features.py:4: FutureWarning: Importing from timm.models.features is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/hub.py:4: FutureWarning: Importing from timm.models.hub is deprecated, please import via timm.models
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.models", FutureWarning)
+WARNING - root - Changed type of config entry "max_steps" from int to NoneType
+WARNING - METER - No observers have been added to this run
+INFO - METER - Running command 'main'
+INFO - METER - Started
+Seed set to 0
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+INFO - root - Loaded hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 model config.
+INFO - root - Loading pretrained hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224 weights (/home/yhruan/.cache/huggingface/hub/models--microsoft--BiomedCLIP-PubMedBERT_256-vit_base_patch16_224/snapshots/9f341de24bfb00180f1b847274256e9b65a3a32e/open_clip_pytorch_model.bin).
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/accelerator_connector.py:579: You passed `deterministic=True` and `benchmark=True`. Note that PyTorch ignores torch.backends.cudnn.deterministic=True when torch.backends.cudnn.benchmark=True.
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/lightning_fabric/plugins/environments/slurm.py:204: The `srun` command is available on your system but is not used. HINT: If your intention is to run Lightning on SLURM, prepend your python command with `srun` like so: srun python run_vqa_rad.py with task_finetune_vqa_rad_biomedclip ...
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+💡 Tip: For seamless cloud logging and experiment tracking, try installing [litlogger](https://pypi.org/project/litlogger/) to enable LitLogger, which logs metrics and artifacts automatically to the Lightning Experiments platform.
+`Trainer(val_check_interval=1.0)` was configured so validation will run at the end of the training epoch..
+/home/yhruan/courses/428/biomedclip-repro/external/METER/meter/datasets/vqa_rad_dataset.py:18: FutureWarning: promote has been superseded by promote_options='default'.
+  super().__init__(
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/optimization.py:411: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/utilities/_pytree.py:21: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/modeling_utils.py:907: FutureWarning: The `device` argument is deprecated and will be removed in v5 of Transformers.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 32. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/loops/fit_loop.py:534: Found 228 module(s) in eval mode at the start of training. This may lead to unexpected behavior during training. If this is intentional, you can ignore this warning.
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/pytorch_lightning/utilities/data.py:79: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 20. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+Epoch 0, global step 55: 'val/the_metric' reached 0.00000 (best 0.00000), saving model to 'result/finetune_vqa_rad_seed0/version_14/checkpoints/epoch=0-step=55.ckpt' as top 1
+Epoch 1, global step 110: 'val/the_metric' reached 0.26606 (best 0.26606), saving model to 'result/finetune_vqa_rad_seed0/version_14/checkpoints/epoch=1-step=110.ckpt' as top 1
+Epoch 2, global step 165: 'val/the_metric' was not in top 1
+Epoch 3, global step 220: 'val/the_metric' was not in top 1
+Epoch 4, global step 275: 'val/the_metric' was not in top 1
+Epoch 5, global step 330: 'val/the_metric' was not in top 1
+Epoch 6, global step 385: 'val/the_metric' reached 0.29358 (best 0.29358), saving model to 'result/finetune_vqa_rad_seed0/version_14/checkpoints/epoch=6-step=385.ckpt' as top 1
+Epoch 7, global step 440: 'val/the_metric' was not in top 1
+Epoch 8, global step 495: 'val/the_metric' was not in top 1
+Epoch 9, global step 550: 'val/the_metric' was not in top 1
+`Trainer.fit` stopped: `max_epochs=10` reached.
+Restoring states from the checkpoint path at result/finetune_vqa_rad_seed0/version_14/checkpoints/epoch=6-step=385.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0,1]
+Loaded model weights from the checkpoint at result/finetune_vqa_rad_seed0/version_14/checkpoints/epoch=6-step=385.ckpt
+INFO - METER - Completed after 0:09:25
+
+┏━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃    ┃ Name                        ┃ Type             ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0  │ cross_modal_text_transform  │ Linear           │  590 K │ train │     0 │
+│ 1  │ cross_modal_image_transform │ Linear           │  590 K │ train │     0 │
+│ 2  │ token_type_embeddings       │ Embedding        │  1.5 K │ train │     0 │
+│ 3  │ vit_model                   │ BiomedCLIPVisua… │ 85.8 M │ train │     0 │
+│ 4  │ text_transformer            │ BertModel        │  109 M │ eval  │     0 │
+│ 5  │ cross_modal_image_layers    │ ModuleList       │ 56.7 M │ train │     0 │
+│ 6  │ cross_modal_text_layers     │ ModuleList       │ 56.7 M │ train │     0 │
+│ 7  │ cross_modal_image_pooler    │ Pooler           │  590 K │ train │     0 │
+│ 8  │ cross_modal_text_pooler     │ Pooler           │  590 K │ train │     0 │
+│ 9  │ vqa_classifier              │ Sequential       │  3.0 M │ train │     0 │
+│ 10 │ train_vqa_score             │ VQAScore         │      0 │ train │     0 │
+│ 11 │ train_vqa_loss              │ Scalar           │      0 │ train │     0 │
+│ 12 │ val_vqa_score               │ VQAScore         │      0 │ train │     0 │
+│ 13 │ val_vqa_loss                │ Scalar           │      0 │ train │     0 │
+└────┴─────────────────────────────┴──────────────────┴────────┴───────┴───────┘
+Trainable params: 314 M                                                         
+Non-trainable params: 0                                                         
+Total params: 314 M                                                             
+Total estimated model params size (MB): 1.3 K                                   
+Modules in train mode: 633                                                      
+Modules in eval mode: 228                                                       
+Total FLOPs: 0                                                                  
+Epoch 9/9  ━━━━━━━━━━━━━━━━━━━━━━ 55/55 0:00:43 • 0:00:00 1.30it/s v_num: 14.000
+
+=== VQA-RAD Test Results () ===
+  Overall accuracy : 29.36% (128/436)
+  Closed accuracy  : 48.67% (128/263)
+  Open accuracy    : 0.00% (0/173)
+  Token F1         : 29.36%
+  Saved to result/vqa_rad_.json
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│      val/the_metric       │    0.29357796907424927    │
+│       vqa/val/loss        │     4.137559413909912     │
+│    vqa/val/loss_epoch     │     4.135472774505615     │
+│       vqa/val/score       │    0.29357796907424927    │
+│    vqa/val/score_epoch    │    0.29357796907424927    │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14/14 0:00:03 • 0:00:00 4.06it/s 
+
