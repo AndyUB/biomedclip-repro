@@ -1,0 +1,20 @@
+{
+  "config": {
+    "method": "lora",
+    "rank": 4,
+    "lambda_l2sp": null,
+    "n_layers": 2,
+    "lr_backbone": 5e-05,
+    "lr_head": 0.0001,
+    "batch_size": 16,
+    "epochs": 100,
+    "dropout": 0.05
+  },
+  "overall": 0.5779816513761468,
+  "closed": 0.6037735849056604,
+  "open": 0.46774193548387094,
+  "f1": 0.5877821464977429,
+  "epoch": 35,
+  "elapsed_s": 3846,
+  "timestamp": "2026-05-15T18:16:55.543118"
+}

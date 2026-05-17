@@ -89,6 +89,56 @@ Key tuning findings:
 | Closed | 61.13% | 76.50% | −15.4 pp |
 | Open | 51.61% | 67.00% | −15.4 pp |
 
+---
+
+## Finding 4: Constrained encoder fine-tuning does not surpass frozen-encoder ceiling
+
+Two constrained fine-tuning methods were tested:
+
+### LoRA r=4 (294K adapter params on Q/V/QKV projections + 2-layer co-attention head)
+100 epochs, LR_backbone=5e-5, LR_head=1e-4, bs=16, dropout=0.05.
+
+| Epoch | Overall | Closed | Open |
+|---|---|---|---|
+| 35 (best) | 57.80% | 60.38% | 46.77% |
+
+Peaked at ep35 then slowly declined. F1=58.78%.
+
+### L2-SP λ=0.01 (full backbone fine-tuning + L2 penalty toward pretrained weights)
+100 epochs, same other hyperparams as LoRA.
+
+| Epoch | Overall | Closed | Open |
+|---|---|---|---|
+| 30 (best overall) | 58.10% | 62.26% | 40.32% |
+| 65 (best open) | 55.35% | 55.09% | 56.45% |
+
+F1=59.79% at best-overall epoch. Notable: open accuracy climbs to 56.45% at ep65 (while
+closed drops), suggesting the model gradually shifts from closed-biased to more balanced
+predictions as fine-tuning deepens.
+
+### Summary vs frozen-encoder ceiling
+
+| Method | Overall | Closed | Open | F1 |
+|---|---|---|---|---|
+| Frozen encoder (best, 5 rounds) | 59.33% | 61.13% | 51.61% | — |
+| LoRA r=4 | 57.80% | 60.38% | 46.77% | 58.78% |
+| L2-SP λ=0.01 | 58.10% | 62.26% | 40.32% | 59.79% |
+| **Paper** | **72.70%** | **76.50%** | **67.00%** | **73.13%** |
+
+Neither constrained fine-tuning method surpassed the frozen-encoder ceiling.
+
+**Why constrained fine-tuning doesn't help:**
+- LoRA r=4: only 295K adapter params — insufficient capacity to meaningfully shift encoder
+  representations for a new domain task, while the co-attention head has the same capacity
+  as frozen-encoder case
+- L2-SP λ=0.01: the L2 penalty effectively prevents the backbone from moving far enough
+  to learn VQA-specific features; the model essentially behaves close to the frozen case
+
+Potential next steps: LoRA rank=8 or 16 (more adapter capacity), weaker L2-SP (λ=0.001),
+or accepting that the gap is irreducible without the unreleased BiomedCLIP+METER pretrained checkpoint.
+
+---
+
 ## Root Cause Assessment
 
 The reproduction gap is most likely due to **missing domain-specific METER pretraining**.

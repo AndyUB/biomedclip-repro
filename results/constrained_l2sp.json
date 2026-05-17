@@ -1,0 +1,20 @@
+{
+  "config": {
+    "method": "l2sp",
+    "rank": null,
+    "lambda_l2sp": 0.01,
+    "n_layers": 2,
+    "lr_backbone": 5e-05,
+    "lr_head": 0.0001,
+    "batch_size": 16,
+    "epochs": 100,
+    "dropout": 0.05
+  },
+  "overall": 0.581039755351682,
+  "closed": 0.6226415094339622,
+  "open": 0.4032258064516129,
+  "f1": 0.5978553556535209,
+  "epoch": 30,
+  "elapsed_s": 5202,
+  "timestamp": "2026-05-15T18:39:36.347141"
+}

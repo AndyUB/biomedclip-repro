@@ -1,0 +1,42 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Method: lora  device: cuda
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Train: 1797  Test: 451  Classes: 221
+LoRA rank=4: replaced 36 layers, 294,912 adapter params trainable
+  Replaced: ['visual.trunk.blocks.0.attn.qkv', 'visual.trunk.blocks.1.attn.qkv', 'visual.trunk.blocks.2.attn.qkv', 'visual.trunk.blocks.3.attn.qkv', 'visual.trunk.blocks.4.attn.qkv', 'visual.trunk.blocks.5.attn.qkv'] ...
+Total trainable params: 29,996,765
+  ep  5  overall=53.52%  closed=56.60%  open=40.32%
+  ep 10  overall=50.46%  closed=53.21%  open=38.71%
+  ep 15  overall=52.29%  closed=54.72%  open=41.94%
+  ep 20  overall=53.82%  closed=56.60%  open=41.94%
+  ep 25  overall=57.19%  closed=61.13%  open=40.32%
+  ep 30  overall=57.49%  closed=61.51%  open=40.32%
+  ep 35  overall=57.80%  closed=60.38%  open=46.77%
+  ep 40  overall=54.43%  closed=58.49%  open=37.10%
+  ep 45  overall=55.35%  closed=60.00%  open=35.48%
+  ep 50  overall=55.35%  closed=59.62%  open=37.10%
+  ep 55  overall=56.57%  closed=60.38%  open=40.32%
+  ep 60  overall=52.60%  closed=55.85%  open=38.71%
+  ep 65  overall=56.57%  closed=60.00%  open=41.94%
+  ep 70  overall=55.35%  closed=58.87%  open=40.32%
+  ep 75  overall=56.27%  closed=60.00%  open=40.32%
+  ep 80  overall=56.27%  closed=60.38%  open=38.71%
+  ep 85  overall=56.27%  closed=60.38%  open=38.71%
+  ep 90  overall=56.27%  closed=60.00%  open=40.32%
+  ep 95  overall=56.27%  closed=60.00%  open=40.32%
+  ep100  overall=56.27%  closed=60.00%  open=40.32%
+
+=== Best (lora) ===
+  Overall: 57.80%  Closed: 60.38%  Open: 46.77%  F1: 58.78%  epoch: 35
+  Elapsed: 3846s
+  Saved: /home/yhruan/courses/428/biomedclip-repro/src/../results/constrained_lora.json

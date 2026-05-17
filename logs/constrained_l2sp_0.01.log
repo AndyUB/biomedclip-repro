@@ -1,0 +1,41 @@
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Method: l2sp  device: cuda
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/yhruan/miniconda3/envs/biomedclip/lib/python3.10/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/yhruan/.local/lib/python3.10/site-packages/huggingface_hub/file_download.py:942: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Train: 1797  Test: 451  Classes: 221
+L2-SP λ=0.01: 195,902,721 backbone params trainable
+Total trainable params: 225,604,574
+  ep  5  overall=55.05%  closed=59.62%  open=35.48%
+  ep 10  overall=57.80%  closed=61.13%  open=43.55%
+  ep 15  overall=57.80%  closed=61.13%  open=43.55%
+  ep 20  overall=56.88%  closed=61.13%  open=38.71%
+  ep 25  overall=55.66%  closed=58.49%  open=43.55%
+  ep 30  overall=58.10%  closed=62.26%  open=40.32%
+  ep 35  overall=58.10%  closed=60.38%  open=48.39%
+  ep 40  overall=56.57%  closed=58.11%  open=50.00%
+  ep 45  overall=55.35%  closed=56.98%  open=48.39%
+  ep 50  overall=56.27%  closed=57.74%  open=50.00%
+  ep 55  overall=52.29%  closed=55.09%  open=40.32%
+  ep 60  overall=56.88%  closed=57.74%  open=53.23%
+  ep 65  overall=55.35%  closed=55.09%  open=56.45%
+  ep 70  overall=55.05%  closed=55.47%  open=53.23%
+  ep 75  overall=53.82%  closed=55.85%  open=45.16%
+  ep 80  overall=55.05%  closed=56.23%  open=50.00%
+  ep 85  overall=55.96%  closed=56.60%  open=53.23%
+  ep 90  overall=56.27%  closed=56.98%  open=53.23%
+  ep 95  overall=56.27%  closed=56.98%  open=53.23%
+  ep100  overall=56.27%  closed=56.98%  open=53.23%
+
+=== Best (l2sp) ===
+  Overall: 58.10%  Closed: 62.26%  Open: 40.32%  F1: 59.79%  epoch: 30
+  Elapsed: 5202s
+  Saved: /home/yhruan/courses/428/biomedclip-repro/src/../results/constrained_l2sp.json
